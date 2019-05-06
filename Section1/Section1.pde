@@ -36,14 +36,10 @@ class Visualizer {
       rect(x + 40 * i, y + 100, 40, values[i]); 
   }
   void update() {
-    //???WRITE THIS METHOD SECOND!!!
     for (int i = 0; i < values.length; i++) {
-      values[i] += speeds[i]; //the speed updates the values. Do not touch this.
-      //??? keep them values between max/min value so they stay in the box.
-
-      //??? reverse the speeds so the bar oscillates up/down when it reaches max/min
-
-      
+      values[i] += speeds[i]; 
+      if (values[i] < -100 || values[i] > 100) { //Goes out of range.
+        speeds[i] = -1;
     }
   }
 }
