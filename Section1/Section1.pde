@@ -40,7 +40,7 @@ class Visualizer {
     for (int i = 0; i < values.length; i++) {
       values[i] += speeds[i]; 
       if (values[i] < -100 || values[i] > 100) { //Goes out of range.
-        speeds[i] = -1;
+        speeds[i] = speeds[i] * -1;
       }
     }
   }
