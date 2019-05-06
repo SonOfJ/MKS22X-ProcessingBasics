@@ -33,13 +33,15 @@ class Visualizer {
       if (values[i] >= 150 && values[i] <= 200) {
         fill(255, 0, 0); //Set to red.
       }
-      rect(x + 40 * i, y + 100, 40, values[i]); 
+      rect(x + 40 * i, y + 100, 40, values[i]);
+    }
   }
   void update() {
     for (int i = 0; i < values.length; i++) {
       values[i] += speeds[i]; 
       if (values[i] < -100 || values[i] > 100) { //Goes out of range.
         speeds[i] = -1;
+      }
     }
   }
 }
